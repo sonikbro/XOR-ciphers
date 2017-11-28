@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AuthorController">
+   <children>
+      <ImageView fx:id="logoFIT" fitHeight="212.0" fitWidth="164.0" layoutX="218.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="212.0" layoutY="269.0" text="Автор: Мельник Анатолій" />
+      <Label layoutX="173.0" layoutY="238.0" text="Факультет інформаційних технологій" />
+      <Label layoutX="276.0" layoutY="302.0" text="2017 р." />
+   </children>
+</AnchorPane>

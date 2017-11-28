@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindowController">
+   <children>
+      <TabPane layoutY="33.0" prefHeight="367.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+        <tabs>
+          <Tab text="Шифрування">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="600.0">
+                     <children>
+                        <TextArea fx:id="textArea_encrypt" layoutY="49.0" prefHeight="180.0" prefWidth="580.0" text="&#10;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="49.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Введіть текст:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_encrypt" layoutX="40.0" layoutY="263.0" mnemonicParsing="false" onAction="#encryptText" text="Зашифрувати" AnchorPane.bottomAnchor="35.0" />
+                        <TextField fx:id="textFieldKey_encrypt" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="403.0" AnchorPane.rightAnchor="10.0" />
+                        <Label layoutX="269.0" layoutY="265.0" text="Введіть ключ:" AnchorPane.bottomAnchor="37.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Дешифрування">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="173.0" layoutY="247.0" text="Введіть ключ:" AnchorPane.bottomAnchor="55.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldKey_dencrypt" layoutX="312.0" layoutY="245.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="312.0" AnchorPane.rightAnchor="101.0" />
+                        <Button fx:id="btn_dencrypt" layoutX="28.0" layoutY="263.0" mnemonicParsing="false" onAction="#dencryptText" text="Розшифрувати" AnchorPane.bottomAnchor="35.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Розшифрований текст:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textArea_dencrypt" layoutX="10.0" layoutY="48.0" prefHeight="192.0" prefWidth="580.0" text="&#10;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="49.0" />
+                        <TextField fx:id="textField_filePath" layoutX="312.0" layoutY="281.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="312.0" AnchorPane.rightAnchor="101.0" />
+                        <Label layoutX="173.0" layoutY="283.0" text="Виберіть файл:" AnchorPane.bottomAnchor="19.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="button_FileChoos" layoutX="508.0" layoutY="279.0" mnemonicParsing="false" onAction="#FileChoos" text="Вибрати" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="14.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <MenuBar layoutY="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#saveRecsult" text="Зберегти  результат" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Допомога">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#getInstruction" text="Інструкція" />
+                  <MenuItem fx:id="menu_author" mnemonicParsing="false" onAction="#visbleAuthor" text="Автор" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
